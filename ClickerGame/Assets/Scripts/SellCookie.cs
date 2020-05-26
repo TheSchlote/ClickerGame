@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SellCookie : MonoBehaviour
 {
-    public GameObject textBox;
+    //public GameObject textBox;
     public GameObject statusBox;
 
     public void ClickTheButton()
