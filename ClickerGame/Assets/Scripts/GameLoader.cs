@@ -4,27 +4,23 @@ using UnityEngine;
 
 public class GameLoader : MonoBehaviour
 {
-    public int savedCookies;
-    public int savedCash;
-    public int savedBakers;
-    public int savedBakersPerSec;
+    public int savedNicks;
+    public int savedAutoNicks;
+    public int savedNicksPerSec;
 
     // Start is called before the first frame update
     void Start()
     {
         if(MainMenu.isLoading == true)
         {
-            savedCookies = PlayerPrefs.GetInt("SavedCookies");
-            GlobalCookies.CookieCount = savedCookies;
+            savedNicks = PlayerPrefs.GetInt("SavedNicks");
+            GlobalNicks.NickCount = savedNicks;
 
-            savedCash = PlayerPrefs.GetInt("SavedCash");
-            GlobalCash.CashCount = savedCash;
+            savedAutoNicks = PlayerPrefs.GetInt("NumberOfAutoNicks");
+            GlobalAutoNicks.numberOfNicks = savedAutoNicks;
 
-            savedBakers = PlayerPrefs.GetInt("NumberOfBakers");
-            GlobalBaker.numberOfBakers = savedBakers;
-
-            savedBakersPerSec = PlayerPrefs.GetInt("BakersPerSec");
-            GlobalBaker.bakersPerSec = savedBakersPerSec;
+            savedNicksPerSec = PlayerPrefs.GetInt("NicksPerSec");
+            GlobalAutoNicks.nicksPerSec = savedNicksPerSec;
         }
     }
 }

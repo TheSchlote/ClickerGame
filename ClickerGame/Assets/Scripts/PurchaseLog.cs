@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class PurchaseLog : MonoBehaviour
 {
-    public GameObject AutoCookie;
+    public GameObject AutoNick;
     public AudioSource playSound;
 
-    public void StartAutoCookie()
+    public void StartAutoNicks()
     {
         playSound.Play();
-        AutoCookie.SetActive(true);
-        GlobalCash.CashCount -= GlobalBaker.bakerValue;
-        GlobalBaker.bakerValue *= 2;
-        GlobalBaker.numberOfBakers += 1;
-        GlobalBaker.bakersPerSec += 1;
+        AutoNick.SetActive(true);
+        GlobalAutoNicks.nickValue *= 2;
+        GlobalAutoNicks.numberOfNicks += 1;
+        GlobalAutoNicks.nicksPerSec += 1;
     }
 }

@@ -9,17 +9,14 @@ public class SaveGame : MonoBehaviour
     //public int saveGameCash;
     public Button saveButton;
     public Text saveText;
-
-    void Update()
-    {
-        
-    }
+    public Text statsText;
 
     public void SaveTheGame()
     {
-        PlayerPrefs.SetInt("SavedCookies", GlobalCookies.CookieCount);
-        PlayerPrefs.SetInt("SavedCash", GlobalCash.CashCount);
-        PlayerPrefs.SetInt("NumberOfBakers", GlobalBaker.numberOfBakers);
-        PlayerPrefs.SetInt("BakersPerSec", GlobalBaker.bakersPerSec);
+        PlayerPrefs.SetInt("SavedNicks", GlobalNicks.NickCount);
+        PlayerPrefs.SetInt("NumberOfAutoNicks", GlobalAutoNicks.numberOfNicks);
+        PlayerPrefs.SetInt("NicksPerSec", GlobalAutoNicks.nicksPerSec);
+
+        statsText.text = "Game saved! - " + GlobalNicks.NickCount + " with Nicks Collected!";
     }
 }
